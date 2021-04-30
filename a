@@ -1,0 +1,147 @@
+{
+  "each": {
+    "prefix": "each-e",
+    "body": [
+      "<% ${1:items}.each do |${2:item}| %>",
+      "\t$0",
+      "<% end %>"
+    ]
+  },
+  "render": {
+    "prefix": "render-e",
+    "body": [
+      "<%= render partial: \"${1:template_name}\"${2:, locals: { ${3:variable}: ${4:\"data_value\"} \\}} %>"
+    ]
+  },
+  "form_label": {
+    "prefix": "form_label-e",
+    "body": [
+      "<%= ${1:form}.label :${2:table_column} %><br />"
+    ]
+  },
+  "image_tag": {
+    "prefix": "image_tag-e",
+    "body": [
+      "<%= image_tag \"${1:$CLIPBOARD}\" if $1.attached? %>"
+    ]
+  },
+  "erb comment-out": {
+    "prefix": "q-e\r",
+    "description": "",
+    "body": [
+      "\r<%",
+      "\r=begin",
+      "\r%>",
+      "\r$0",
+      "\r",
+      "\r<%",
+      "\r=end",
+      "\r%>"
+        ]
+  },
+  "erb comment out start": {
+    "prefix": "qq-e\r",
+    "description": "",
+    "body": [
+      "\r",
+      "\r",
+      "<%\r",
+      "=begin\r",
+      "%>\r",
+      ""
+    ]
+  },
+  "erb comment out end": {
+    "prefix": "qqq-e",
+    "description": "",
+    "body": [
+      "$0",
+      "<%",
+      "=end",
+      "%>",
+      ""
+    ]
+  },
+  "<% %>": {
+    "prefix": "w-e",
+    "body": [
+      "<% $0 %>"
+    ]
+  },
+  "<%= %>": {
+    "prefix": "ww-e",
+    "body": [
+      "<%= $0 %>"
+    ]
+  },
+  "<%# %>": {
+    "prefix": "www-e",
+    "body": [
+      "<%# $0 %>"
+    ]
+  },
+  "times": {
+    "prefix": "times-e",
+    "body": [
+      "<% ${1:count}.times do |i| %>",
+      "\t$0",
+      "<% end %>"
+    ]
+  },
+  "form_with": {
+    "prefix": "form_with-e",
+    "body": [
+      "<%= form_with(${1|url,model|}: ${2:[@${3:value}, @${4:value}]}${5:, method: :${6|post,get,put,delete,patch|}}${7:, local: true}) do |${8:form}| %>",
+      "\t$0",
+      "\t<%= $8.submit \"submit\" %>",
+      "<% end %>"
+    ]
+  },
+  "form_submit": {
+    "prefix": "f submit-e",
+    "body": [
+      "<%= ${1:form}.submit \"submit\" %>"
+    ]
+  },
+  "form_text_field": {
+    "prefix": "form_text_field-e",
+    "body": [
+      "<%= ${1:form}.text_field :${2:table_column} %>$0"
+    ]
+  },
+  "form_text_area": {
+    "prefix": "form_text_area-e",
+    "body": [
+      "<%= ${1:form}.text_area :${2:table_column} %>$0"
+    ]
+  },
+  "form_password": {
+    "prefix": "f pass-e",
+    "body": [
+      "<%= ${1:form}.password_field :${2:table_column} %>$0"
+    ]
+  },
+  "link_to_URI": {
+    "prefix": "link to uri-e",
+    "body": [
+      "<%= link_to \"${1:VALUE}\", \"${2:#URI}\" %>$0"
+    ]
+  },
+  "link_to_Prefix": {
+    "prefix": "link to prefix-e",
+    "body": [
+      "<%= link_to ${1:\"${2:VALUE}\"}, ${3:$CLIPBOARD}_path${4:(${5:model_name}.${6:table_column})}${7:, method: :${8|get,post,put,delete,patch|}} %>$0"
+    ]
+  },
+  "link_to_PATH": {
+    "prefix": "link to path-e",
+    "body": [
+      "<%= link_to ${1:\"${2:VALUE}\"}, \"${3:PATH}\"${4:, method: :${5|get,post,put,delete,patch|}} %>$0"
+    ]
+  },
+	"id:": {
+		"prefix": "id:-e",
+		"body": "id: \"${1:id_name}\"",
+		"description": ""
+	}
+}
